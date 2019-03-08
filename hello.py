@@ -6,7 +6,7 @@ CORS(app)
 @app.route("/", methods=["GET", "POST", "DELETE"])
 def hello():
     if request.method == "GET":
-      return "Hello World!"
+      return "[]"
     if request.method == "POST":
       body = request.get_json()
       return jsonify(body)
