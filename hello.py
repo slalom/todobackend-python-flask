@@ -1,28 +1,22 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-
-
 app = Flask(__name__)
 CORS(app)
 arr = []  
 @app.route("/", methods=["GET", "POST", "DELETE"])
 def hello():
-    global arr
-
+    response = None
     if request.method == "GET": 
-        print(arr)
-        return jsonify(arr)
+        response = jsonify(arr)
     if request.method == "POST":
         body = request.get_json()
-        print(body)
-        arr.append(body['title'])
-        print(arr)	
-        return jsonify(body)
+        arr.append(body)
+        response = jsonify(body)
     if request.method == "DELETE":
-        if len(arr) > 0:
-            arr.pop()   
-        print(arr)
-        return jsonify(arr)
+        arr.clear()
+        response = jsonify(arr)
+    print(arr)
+    return response
 
 app.run()
