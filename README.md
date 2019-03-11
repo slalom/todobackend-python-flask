@@ -1,5 +1,5 @@
 # What?
-Python + Flask implementation of todobackend.com
+Python + Flask implementation of [todobackend.com](https://www.todobackend.com/)
 
 # Prerequisites
 
@@ -8,15 +8,15 @@ Python + Flask implementation of todobackend.com
 
 # Running
 
-1. Install required modules
+### Install required modules
 
 `pipenv install`
 
-2. Run the application
+### Run the application
 
 `pipenv run python hello.py`
 
-3. Run the tests
+### Run the tests
 
 Go [here](https://www.todobackend.com/specs/index.html?http://localhost:5000)
 
