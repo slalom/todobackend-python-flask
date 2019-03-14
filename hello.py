@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify 
 from flask_cors import CORS
 
 app = Flask(__name__)
@@ -11,6 +11,8 @@ def hello():
         response = jsonify(arr)
     if request.method == "POST":
         body = request.get_json()
+        body['completed'] = False 
+        body['url'] = '' 
         arr.append(body)
         response = jsonify(body)
     if request.method == "DELETE":
