@@ -14,9 +14,10 @@ Python + Flask implementation of [todobackend.com](https://www.todobackend.com/)
 
 ### Run the application
 
-`pipenv run python hello.py`
+`make run`
 
 ### Run the tests
 
-Go [here](https://www.todobackend.com/specs/index.html?http://localhost:5000)
+1. Run the app
+2. `make test`
 
